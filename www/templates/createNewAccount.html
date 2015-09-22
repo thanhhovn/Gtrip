@@ -1,0 +1,91 @@
+<!-- Tab Function content-->
+<ion-view view-title="<img class='logo' src='img/GTrip-Logo-with-Trade-Mark-resize1.jpg'><span style='padding-left:30px;'>Booking page</span>" >
+    <ion-content class="padding" overflow-scroll="true" overflow-x="false">
+        <div style="padding-top:60px;">
+            <span class="titleContent" style="margin-top:10px;padding-left: 2px;">Create new account<br></span>
+            <!-- Card content -->
+            <span class="descriptionTitleContent" style="padding-left: 2px;" style="font-weight:normal !important;">Login Information</span>
+                <div class="card">
+                    <form name="signup_form" novalidate ng-submit="signupForm()">
+                    <div class="list">
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="email" placeholder="Your Email..." ng-model="booking.email">
+                        <span class="hidden errorForm" id="booking_form_email">*Please check your email</span>
+                        <!--<span ng-show="!booking.email.length" style="font-size:10px;">Please enter something!</span>-->
+                      </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Password</span>
+                        <input type="password" placeholder="Password..." ng-model="booking.firstname">
+                        <span class="hidden errorForm" id="booking_form_firstname">*Please enter your first name</span>
+                      </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Confirm Password</span>
+                        <input type="password" placeholder="Confirm Password ..." ng-model="booking.surname">
+                        <span class="hidden errorForm" id="booking_form_surname">*Please enter your surname</span>
+                      </label>
+                    </div>      
+                </div>
+                <!-- End card content-->
+                    <!-- Card content -->
+            <span class="descriptionTitleContent" style="padding-left: 2px;" style="font-weight:normal !important;">Personal Information</span>
+                <div class="card">
+                    <form name="signup_form" novalidate ng-submit="signupForm()">
+                    <div class="list">
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Job Title *</span>
+                        <input type="email" placeholder="Your Email..." ng-model="booking.email">
+                        <span class="hidden errorForm" id="booking_form_email">*Please check your email</span>
+                        <!--<span ng-show="!booking.email.length" style="font-size:10px;">Please enter something!</span>-->
+                      </label>
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">First Name *</span>
+                        <input type="email" placeholder="Your Email..." ng-model="booking.email">
+                        <span class="hidden errorForm" id="booking_form_email">*Please check your email</span>
+                        <!--<span ng-show="!booking.email.length" style="font-size:10px;">Please enter something!</span>-->
+                      </label>
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Last Name *</span>
+                        <input type="email" placeholder="Your Email..." ng-model="booking.email">
+                        <span class="hidden errorForm" id="booking_form_email">*Please check your email</span>
+                        <!--<span ng-show="!booking.email.length" style="font-size:10px;">Please enter something!</span>-->
+                      </label>
+                        <label class="item item-input item-stacked-label">
+                        <span class="input-label">Phone number</span>
+                        <input type="email" placeholder="Your Email..." ng-model="booking.email">
+                        <span class="hidden errorForm" id="booking_form_email">*Please check your email</span>
+                        <!--<span ng-show="!booking.email.length" style="font-size:10px;">Please enter something!</span>-->
+                      </label>
+                         <label class="item item-input item-stacked-label">
+                        <span class="input-label">Mobile</span>
+                        <input type="email" placeholder="Your Email..." ng-model="booking.email">
+                        <span class="hidden errorForm" id="booking_form_email">*Please check your email</span>
+                        <!--<span ng-show="!booking.email.length" style="font-size:10px;">Please enter something!</span>-->
+                      </label>
+                        <label class="item item-input item-select">
+                            <div class="input-label">
+                              Are you a Company Director/Authorization person?
+                            </div>
+                            <select>
+                              <option selected>No I am a staff</option>
+                              <option>Yes, I am</option>
+                              <option>No, I am a Freelance Tour Leader/Guide</option>
+                            </select>
+                          </label>
+                        <label class="item item-input item-select">
+                            <div class="input-label">
+                              Company
+                            </div>
+                            <select>
+                              <option selected>Select company</option>
+                              <option>beautiful trip - China</option>
+                              <option>beautiful trip - VietNam</option>
+                            </select>
+                          </label>
+                    </div>      
+                </div>
+                <!-- End card content-->
+        </div>
+    </ion-content>
+</ion-view>
+<!-- End-->

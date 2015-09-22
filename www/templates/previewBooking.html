@@ -1,0 +1,118 @@
+<!-- Tab Function content-->
+<ion-view view-title="<img class='logo' src='img/GTrip-Logo-with-Trade-Mark-resize1.jpg'><span style='padding-left:30px;'>Booking page</span>">
+    <ion-content class="padding" overflow-scroll="true">
+        <p>
+        <div class="row">
+  <div class="col">.col</div>
+  <div class="col col-75">.col.col-75</div>
+</div>
+            <!-- Issue when add ng-controller to the div below it will run twice times -->
+            <div style="padding-top:10px">
+                <span class="titleContent" style="margin-top:10px;padding-left: 5px;">PREVIEW BOOKING</span>
+                <div class="row tableRow">
+                  <div class="col tableColumn" style="padding-top:18px"><img src="http://www.daycomsolutions.com/Support/BatchImage/HPIM0050w100.JPG"></div>
+                  <div class="col col-67 tableColumn" style="border-left:none;line-height:30px;">
+                    <div class="row bold">{{booking.packageName}}</div>
+                    <div class="row bold">Telephone: <span style="font-weight:normal;padding-left:10px;"> {{booking.phone}}</span></div>
+                    <div class="row bold">Email: <span  style="font-weight:normal;padding-left:10px;"> {{booking.email}}</span></div>
+                  </div>
+                </div>
+                <div class="row tableRow">
+                  <div class="col tableColumn" style="border-bottom: 1px solid #D4D4D4;"><span class="bold">Booking Name</span></div>
+                  <div class="col col-67 tableColumn" style="border-bottom: 1px solid #D4D4D4;">
+                    <span style="padding-left:10px;">{{booking.bookingName}}</span>
+                  </div>
+                </div>
+                <div class="previewBookingTitle" style="padding-top:10px;"><i class="ion-ios-cart" style="font-size: 26px;"> </i>Products & Arrival Information
+                </div>
+                <div class="previewBookingPage">
+                    <div class="row header">
+                      <div class="col">Name</div>
+                      <div class="col">Service Code</div>
+                      <div class="col">Pay Limit</div>
+                    </div>
+                    <div class="row">
+                      <div class="col">Bush Walk, Sydney</div>
+                      <div class="col">16/09/2015</div>
+                      <div class="col">07:30 AM - 11:00 AM</div>
+                    </div>
+                </div>
+                
+                <div class="previewBookingTitle" style="padding-top:10px;"><i class="ion-cash" style="font-size: 26px;"> </i>Price
+                </div>
+                <div class="previewBookingPage">
+                    <div class="row header">
+                      <div class="col">Package Group</div>
+                      <div class="col">Quantity</div>
+                      <div class="col">Rate</div>
+                      <div class="col">Amount</div>
+                    </div>
+                    <div class="row">
+                      <div class="col">2ADT</div>
+                      <div class="col">2</div>
+                      <div class="col">100.274</div>
+                      <div class="col">200.55</div>
+                    </div>
+                    <div class="row header">
+                      <div class="col" style="text-align:center;">Barossa and Gorge</div>
+                    </div>
+                    <div class="row header" >
+                      <div class="col" style="background:#edf2f8 !important; color:black !important;text-align:center">Tue 15/09/2015</div>
+                    </div>
+                    
+                    
+                    <div class="row">
+                      <div class="col">Pax Extra</div>
+                      <div class="col">1</div>
+                      <div class="col">42.000</div>
+                      <div class="col">42.00</div>
+                    </div>
+                    <div class="row">
+                      <div class="col">Roll Bed</div>
+                      <div class="col">1</div>
+                      <div class="col">42.000</div>
+                      <div class="col">42.00</div>
+                    </div>
+                    <div class="row">
+                      <div class="col">Extra Breakfast</div>
+                      <div class="col">1</div>
+                      <div class="col">42.000</div>
+                      <div class="col">42.00</div>
+                    </div>
+                    <div class="row">
+                      <div class="col" style="background:#fff8f0 !important;"></div>
+                      <div class="col" style="background:#fff8f0 !important;"></div>
+                      <div class="col" style="background:#fff8f0 !important;">Total</div>
+                      <div class="col" style="background:#fff8f0 !important;">421.05</div>
+                    </div>
+                    <div class="row">
+                      <div class="col" style="text-align:center;border-bottom: 1px solid #D4D4D4 ;">This price include TAX and service fee with the currency of AUD $</div>
+                    </div>
+                    <div class="previewBookingTitle" style="padding-top:10px;"><i class="ion-android-person" style="font-size: 26px;"> </i>PAX details
+                </div>
+                    <div class="row">
+                      <div class="col">Adults</div>
+                      <div class="col">{{booking.adults}}</div>
+                    </div>
+                    <div class="row">
+                      <div class="col">Children</div>
+                      <div class="col">{{booking.children}}</div>
+                    </div>
+                    <div class="row">
+                      <div class="col">Infant</div>
+                      <div class="col">{{booking.infant}}</div>
+                    </div>
+                    <div class="row">
+                      <div class="col" style="border-bottom: 1px solid #D4D4D4 ;">Total</div>
+                      <div class="col" style="border-bottom: 1px solid #D4D4D4 ;">{{booking.total}}</div>
+                    </div>
+                    
+                    <button class="button button-block button-positive" type="submit">Save</button>                    
+                    <button class="button button-block button-positive" ng-click="goBack()">Back to edit</button>
+                    <button class="button button-block button-positive" type="submit">Cancel</button>
+                
+            </div>
+        </p>
+    </ion-content>
+</ion-view>
+<!-- End-->

@@ -1,0 +1,50 @@
+<!-- Tab Profile content-->
+<ion-view view-title="<img class='logo' src='img/GTrip-Logo-with-Trade-Mark-resize1.jpg'><span style='padding-left:30px;'></span>">
+    <ion-content class="padding" overflow-scroll="true">
+        <p>
+            <!-- Issue when add ng-controller to the div below it will run twice times -->
+            <div style="padding-top:50px">
+                <h4>Profile</h4>
+                <div class="card">
+					<div class="fr-profile-field list">
+						<label class="item item-input item-stacked-label">
+							<span class="input-label">Login name</span>
+							<input type="text" value="admin@gmail.com" readonly="readonly">
+						</label>
+						<div class="row">
+							<span style="margin: 10px;"><a href="">Change password</a></span>
+						</div>
+						<label class="item item-input item-stacked-label">
+						<span class="input-label">Job Title *</span>
+						<input type="text" value="job" placeholder="Enter your job" />
+						</label>
+						<label class="item item-input item-stacked-label">
+						<span class="input-label">First name *</span>
+						<input type="text" value="admin" placeholder="Enter your first name"/>
+						</label>
+						<label class="item item-input item-stacked-label">
+						<span class="input-label">Last name *</span>
+						<input type="text" value="can change" placeholder="Enter your last name"/>
+						</label>
+						<label class="item item-input item-stacked-label">
+						<span class="input-label">Telephone</span>
+						<input type="tel" value="" placeholder="Enter your telephone"/>
+						</label>
+						<label class="item item-input item-stacked-label">
+						<span class="input-label">Mobile</span>
+						<input type="tel" value="" placeholder="Enter your mobile"/>
+						</label>
+					</div>					
+                </div>
+				<div class="row">                        
+					<h4>Service Agreement</h4><br />                        
+				</div>
+				<div class="row"><span><a href="" ng-click="downloadFile()">Click here to download</a></span></div>
+				<button class="button button-block button-positive">
+				  Update Profile
+				</button>
+            </div>
+        </p>
+    </ion-content>
+</ion-view>
+<!-- End Profile Content-->

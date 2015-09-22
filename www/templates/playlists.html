@@ -1,0 +1,56 @@
+<!-- Tab Function content-->
+<ion-view view-title="<img class='logo' src='img/GTrip-Logo-with-Trade-Mark-resize1.jpg'>">
+    <ion-content class="padding" overflow-scroll="true">
+        <div class="list">
+        </div>
+        <p>
+            <div ng-controller="ListController"  style="padding-top:50px">
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <input id="searchBox" type="text" placeholder="Package..." ng-model="searchText">
+                    </label>
+                    <i class="icon ion-close placeholder-icon" ng-click="reset()"></i>
+                </div>
+                <div id="status" ng-model="status" style="padding-top:10px;"></div>
+
+                <ion-list>
+                    <ion-item dir-paginate="item in items |filter:searchText |itemsPerPage:5">
+                        <!-- Content data's info-->
+                        <!--<i class="icon ion-{{item.icon}}"></i>-->
+                        <span class="package-title">{{item.title}}</span>
+                        <div class="row">
+                            <div class="col col-20"><img src="http://www.daycomsolutions.com/Support/BatchImage/HPIM0050w50.JPG" />
+                            </div>
+                            <div class="col col-80">
+                                <span class="row responsive-sm item-text-wrap pack-description">
+                                    {{item.description | limitTo: 250 }}{{item.description.length > 250 ? ' ...' : ''}}
+                                </span>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row flaticons">
+                            <div class="col col-75 price">$ 58.50</div>
+                            <div class="col col-25 function">
+                                <a href="" class="btn flaticon-listing1" ng-click="detail({{item.id}})"></a>
+                                <a href="" class="btn flaticon-shopping69" ng-click="booking({{item.id}})"></a>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                </ion-list>
+                <!-- Display pagination -->
+                <div id="paginate">
+                    <div class="row">                        
+                        <dir-pagination-controls
+        					max-size="5"
+        					direction-links="true"
+        					boundary-links="true" >
+        				</dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+
+        </p>
+    </ion-content>
+</ion-view>
+<!-- End-->

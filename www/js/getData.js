@@ -1,0 +1,3 @@
+function identifyUser(){
+ alert('a');   
+}

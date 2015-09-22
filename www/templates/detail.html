@@ -1,0 +1,29 @@
+<!-- Tab Function content-->
+<ion-view view-title="<img class='logo' src='img/GTrip-Logo-with-Trade-Mark-resize1.jpg'><span style='padding-left:30px;'>Detail Package</span>">
+    <ion-content class="padding" overflow-scroll="true">
+        <p>
+            <!-- Issue when add ng-controller to the div below it will run twice times -->
+            <div style="padding-top:50px">
+                <div id="statusDetailPage" class='spinner-loader centered'></div>
+                <div id ="contentDetail" class="card">
+                    <div class="item item-text-wrap">
+                        <span class="titleContent">{{detail.name}}</br></span>
+                        <img class="imageDetail" src="http://gitpackage.com{{detail.coverImage}}"/>
+                        <span></br></span>
+                        <span>Adult rates</span>
+                        <span class="price" style="padding-left:10px;">AUD $30.98</br></span>
+                        <span>Children rates</span>
+                        <span class="price" style="padding-left:10px;">AUD $19.01</br></span>
+                        <span class="descriptionTitleContent">Description</br></span>
+                        <span>{{detail.description}}</br></span>
+                        <span class="descriptionTitleContent">Booking conditions</br></span> 
+                        <span>{{detail.bookingCondition}}</br></span>
+                        <span class="descriptionTitleContent">Other conditions</br></span>
+                        <span>{{detail.otherCondition}}</span>
+                    </div>
+                </div>
+            </div>
+        </p>
+    </ion-content>
+</ion-view>
+<!-- End-->

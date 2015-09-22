@@ -1,0 +1,86 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="right">
+
+                <button menu-toggle="right" class="button button-icon icon ion-navicon" style="padding-right:10px;"></button>
+
+            </ion-nav-buttons>
+
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+        <!-- Toolbar-->
+        <ion-tabs class="tabs-positive tabs-icon-only tabs-top">
+
+            <ion-tab title="Function" icon-on="icon ion-android-apps" icon-off="icon ion-android-apps">
+                <!-- Content tab in templates/playlists.html-->
+            </ion-tab>
+
+            <ion-tab title="Package" icon-on="icon ion-ios-paper" icon-off="icon ion-ios-paper">
+                <!-- Tab Package content-->
+                <ion-view view-title="Package">
+                    <ion-content class="padding">
+                        <p>
+                            <span>Package page</span>
+                        </p>
+                    </ion-content>
+                </ion-view>
+                <!-- End-->
+            </ion-tab>
+
+            <ion-tab title="Booking" icon-on="ion ion-ios-bookmarks" icon-off="ion ion-ios-bookmarks">
+                <!-- Tab 3 content -->
+            </ion-tab>
+
+            <ion-tab title="Favorite" icon-on="ion ion-social-buffer" icon-off="ion ion-social-buffer">
+                <!-- Tab 4 content -->
+            </ion-tab>
+
+            <ion-tab title="Billing" icon-on="ion ion-ios-people" icon-off="ion ion-ios-people">
+                <!-- Tab 5 content -->
+            </ion-tab>
+
+        </ion-tabs>
+
+        <!-- End-->
+    </ion-side-menu-content>
+
+    <ion-side-menu side="right">
+        <!--<ion-header-bar class="bar-stable">
+            <h1 class="title">Management </h1>
+        </ion-header-bar>-->
+        <ion-content>
+            <ion-list>
+                <div class="row" ng-show="loggedIn">
+                    <div class="logo-company col col-20">
+                        <img src="http://www.daycomsolutions.com/Support/BatchImage/HPIM0050w50.JPG" style="border-radius: 100%;" />
+                    </div>
+                    <div class="account-name col col-80">Giay Thuy Tinh</div>
+                </div>                
+                <ion-item menu-close ng-show="loggedOut" href="#/app/login">
+                    Login
+                </ion-item>
+                <ion-item menu-close ng-show="loggedOut" href="#/app/createNewAccount">
+                    Create new Account
+                </ion-item>
+                <ion-item menu-close href="#/app/search">
+                    Package
+                </ion-item>
+                <ion-item menu-close ng-show="loggedIn" href="#/app/profile">
+                    Profile
+                </ion-item>
+                <ion-item menu-close href="#/app/faq">
+                    FAQ
+                </ion-item>
+                <ion-item menu-close href="#/app/barcode_scanner">
+                    Barcode Scanner
+                </ion-item>
+                <ion-item nav-clear="" ng-show="loggedIn" menu-close="" ng-click="logout()">
+                  Logout
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

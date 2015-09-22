@@ -1,0 +1,146 @@
+<!-- Tab Function content-->
+<ion-view view-title="<img class='logo' src='img/GTrip-Logo-with-Trade-Mark-resize1.jpg'><span style='padding-left:30px;'>Booking page</span>">
+    <ion-content class="padding" overflow-scroll="true">
+        <p>
+            <!-- Issue when add ng-controller to the div below it will run twice times -->
+            <div style="padding-top:50px">
+                <div id="statusBookingPage" class='spinner-loader centered'></div>
+                    <!-- Content-->
+                <div id ="contentBooking">
+                <span class="titleContent" style="margin-top:10px;padding-left: 12px;">{{detailBooking.name}}</span>
+                    
+                <!-- Card content -->
+                <div class="card">
+                    <form name="signup_form" novalidate ng-submit="signupForm()">
+                    <div class="list">
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="email" placeholder="Your Email..." ng-model="booking.email">
+                        <span class="hidden errorForm" id="booking_form_email">*Please check your email</span>
+                        <!--<span ng-show="!booking.email.length" style="font-size:10px;">Please enter something!</span>-->
+                      </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">First Name</span>
+                        <input type="text" placeholder="Your first name..." ng-model="booking.firstname">
+                        <span class="hidden errorForm" id="booking_form_firstname">*Please enter your first name</span>
+                      </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Surname</span>
+                        <input type="text" placeholder="Your surname ..." ng-model="booking.surname">
+                        <span class="hidden errorForm" id="booking_form_surname">*Please enter your surname</span>
+                      </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Phone</span>
+                        <input type="number" placeholder="Your phone number..." ng-model="booking.phone">
+                        <span class="hidden errorForm" id="booking_form_phone">*Please enter your phone number</span>
+                      </label>
+                    </div>      
+                </div>
+                <!-- End card content-->
+                
+                <!-- Card content -->
+                <span class="descriptionTitleContent" style="padding-left: 12px;">Package Quantity</span>
+                <div id ="contentBooking" class="card" style="margin-top:0px !important;">
+                    <div class="list">
+                      <label class="item item-input item-stacked-label">
+                        <input type="number" placeholder="Package Quantity..." ng-model="booking.packageQuantity">
+                        <span class="hidden errorForm" id="booking_form_packageQuantity">*Please enter package quantity</span>
+                      </label>                      
+                    </div>      
+                </div>
+                <!-- End card content-->
+                
+                <!-- Card content -->
+                <span class="descriptionTitleContent" style="padding-left: 12px;">Group information</span>
+                <div id ="contentBooking" class="card" style="margin-top:0px !important;">
+                    <div class="list">
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Booking name</span>
+                        <input type="text" placeholder="Booking name..." ng-model="booking.bookingName">
+                      </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label" style="font-weight:bold; color:#777;padding-top:10px; padding-bottom:10px;">PAX details</span>
+                      </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Adults</span>
+                        <input type="number" placeholder="0" ng-change="booking.total=booking.Adults--booking.Children--booking.Infant" ng-model="booking.Adults">
+                      </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Children</span>
+                        <input type="number" placeholder="0" ng-change="booking.total=booking.Adults--booking.Children--booking.Infant" ng-model="booking.Children">
+                      </label>
+                      <label class="item item-input item-stacked-label">
+                        <span class="input-label">Infant</span>
+                        <input type="number" placeholder="0" ng-change="booking.total=booking.Adults--booking.Children--booking.Infant" ng-model="booking.Infant">
+                      </label>
+                      <label class="item item-input item-stacked-label" style="background-color:#f8f8f8;">
+                        <span class="input-label">Total *</span>
+                        <input type="number" placeholder="0" readonly="readonly" ng-model="booking.total" id="booking.total_id">
+                        <span class="hidden errorForm" id="booking_form_total">*Please enter a value greater than or equal 1</span>
+                      </label>
+                    </div>      
+                </div>
+                <!-- End card content-->
+                
+                <!-- Card content -->
+                <span class="descriptionTitleContent" style="padding-left: 12px;">Products</span>
+                <div id ="contentBooking" class="card" style="margin-top:0px !important;">
+                    <div class="list">
+                      <label class="item item-input item-stacked-label">
+                        <span>Product Name</br></span>
+                        <span>Product content</span>
+                      </label>
+                        
+                      <label class="item item-input item-stacked-label" style="padding-right:16px !important;">
+                        <span class="input-label">Arrival date</span>
+                        <input type="date" style="background-color:#f8f8f8;" value="2015-01-01">
+                      </label>
+                      <label class="item item-input item-stacked-label">
+                        <span>Arrival time</span>
+                      </label>
+                      <ul class="list">
+                          <li class="item item-checkbox">
+                             <label class="checkbox">
+                               <input type="checkbox">
+                             </label>
+                             Zoo World (07:30 AM - 11:00 AM)
+                          </li>
+                          <li class="item item-checkbox">
+                             <label class="checkbox">
+                               <input type="checkbox">
+                             </label>
+                             (08:00 AM - 11:00 AM)
+                          </li>
+                      </ul>
+                    </div>      
+                </div>
+                <!-- End card content-->
+                
+                <!-- Card content -->
+                <span class="descriptionTitleContent" style="padding-left: 12px;">Products</span>
+                <div id ="contentBooking" class="card" style="margin-top:0px !important;">
+                    <div class="list">
+                      <ul class="list">
+                           <label class="item item-input item-stacked-label" style="padding-right:16px !important; padding-bottom:16px !important;">
+                            <span class="input-label">Remark</span>
+                            <textarea placeholder="Remark"  style="background-color:#f8f8f8; height: 100px !important;" full-size></textarea>
+                          </label>
+                      </ul>
+                    </div>      
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                       <button class="button button-positive button-small" ng-click="BookingPreview()" style="width:150px !important">PREVIEW</button>
+                       <button class="button button-positive button-small" style="width:150px !important">CANCEL </button>
+                    </div>
+                </div>
+                    
+                <!-- End card content-->
+        
+                    <!-- End Content-->
+            </div>
+        </div>
+        </p>
+    </ion-content>
+</ion-view>
+<!-- End-->
